@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background-color: #fefcf5;
+    color: #1e2f2c;
+    scroll-behavior: smooth;
+    line-height: 1.5;
+}
+
+/* Custom scroll */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #e1e9e0;
+}
+::-webkit-scrollbar-thumb {
+    background: #2c6e49;
+    border-radius: 10px;
+}
+
+/* container padrão */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+/* header / navbar */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #d9e3cf;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.logo i {
+    font-size: 2.5rem;
+    color: #2b7a3e;
+}
+.logo h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    background: linear-gradient(135deg, #1f5437, #3b9e5c);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: -0.5px;
+}
+.nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+.nav-links a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #2c4b35;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+.nav-links a:hover {
+    color: #3aa85c;
+    transform: translateY(-2px);
+}
+
+/* botões estilo */
+.btn-primary {
+    background: #2b7a3e;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.btn-primary:hover {
+    background: #1f5f34;
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(43,122,62,0.3);
+}
+.btn-outline {
+    background: transparent;
+    border: 2px solid #2b7a3e;
+    color: #2b7a3e;
+    padding: 10px 24px;
+    border-radius: 40px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.btn-outline:hover {
+    background: #2b7a3e;
+    color: white;
+}
+
+/* hero section */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 0 70px;
+}
+.hero-content {
+    flex: 1;
+}
+.hero-content .badge {
+    background: #e6f4ea;
+    color: #1f6940;
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+.hero-content h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.hero-content .green-text {
+    color: #2b7a3e;
+}
+.hero-content p {
+    font-size: 1.1rem;
+    color: #3d5446;
+    margin-bottom: 32px;
+    max-width: 90%;
+}
+.hero-stats {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+.stat-item {
+    text-align: left;
+}
+.stat-number {
+    font-weight: 800;
+    font-size: 2rem;
+    color: #1e5631;
+}
+.stat-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #5f7568;
+}
+.hero-image {
+    flex: 1;
+    border-radius: 48px;
+    min-height: 380px;
+    background-size: cover;
+    background-image: linear-gradient(135deg, rgba(45, 110, 70, 0.2), rgba(30, 45, 35, 0.1)), url('https://images.pexels.com/photos/1267325/agriculture-fields-sunrise-crops-1267325.jpeg?auto=compress&cs=tinysrgb&w=800');
+    background-blend-mode: overlay;
+    box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1);
+}
+
+/* seção cards pilares */
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 16px;
+}
+.section-sub {
+    text-align: center;
+    color: #597b68;
+    max-width: 700px;
+    margin: 0 auto 48px;
+}
+.cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin: 40px 0 60px;
+}
+.card {
+    background: white;
+    border-radius: 32px;
+    padding: 32px 24px;
+    text-align: center;
+    flex: 1 1 280px;
+    transition: all 0.25s ease;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+    border: 1px solid #e2eddf;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 30px -12px rgba(43,122,62,0.15);
+    border-color: #bcddae;
+}
+.card-icon {
+    font-size: 3rem;
+    color: #308a4a;
+    margin-bottom: 20px;
+}
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.card p {
+    color: #486354;
+}
+
+/* seção inovação + sustentabilidade */
+.feature-section {
+    background: #eef4ea;
+    border-radius: 60px;
+    margin: 70px 0;
+    padding: 60px 40px;
+}
+.feature-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+}
+.feature-text {
+    flex: 1;
+}
+.feature-text h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.feature-list {
+    list-style: none;
+    margin-top: 20px;
+}
+.feature-list li {
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+}
+.feature-list i {
+    color: #2b7a3e;
+    font-size: 1.2rem;
+    width: 24px;
+}
+.feature-img {
+    flex: 1;
+    background: url('https://images.pexels.com/photos/235725/pexels-photo-235725.jpeg?auto=compress&cs=tinysrgb&w=800') center/cover;
+    border-radius: 40px;
+    min-height: 320px;
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+}
+
+/* números / impacto */
+.impact-counter {
+    background: linear-gradient(115deg, #1f4c2d 0%, #2c6e49 100%);
+    border-radius: 48px;
+    padding: 56px 32px;
+    margin: 60px 0;
+    color: white;
+    text-align: center;
+}
+.counter-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 30px;
+}
+.counter-item {
+    flex: 1;
+    min-width: 150px;
+}
+.counter-number {
+    font-size: 2.8rem;
+    font-weight: 800;
+    font-family: monospace;
+    letter-spacing: 2px;
+}
+.counter-label {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+/* depoimento / campo forte */
+.testimonial {
+    background: white;
+    border-radius: 48px;
+    padding: 48px 36px;
+    margin: 60px 0;
+    text-align: center;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.03);
+    border: 1px solid #dcf0d3;
+}
+.testimonial i {
+    font-size: 3rem;
+    color: #3b9e5c;
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+.testimonial p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    color: #1f352b;
+}
+.testimonial h4 {
+    font-weight: 700;
+    color: #21623b;
+}
+
+/* newsletter */
+.newsletter {
+    background: #f2f8ef;
+    border-radius: 40px;
+    padding: 48px 32px;
+    text-align: center;
+    margin: 50px 0 60px;
+}
+.newsletter h3 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+.newsletter-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 28px;
+}
+.newsletter-form input {
+    padding: 14px 24px;
+    border-radius: 60px;
+    border: 1px solid #cbdcc2;
+    width: 280px;
+    font-size: 1rem;
+    background: white;
+}
+.newsletter-form input:focus {
+    outline: none;
+    border-color: #2b7a3e;
+}
+
+/* footer */
+footer {
+    background: #172e21;
+    color: #d9eedf;
+    padding: 48px 0 24px;
+    border-top-left-radius: 48px;
+    border-top-right-radius: 48px;
+    margin-top: 40px;
+}
+.footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+.footer-col p {
+    margin-top: 12px;
+    max-width: 260px;
+    color: #bdd9c5;
+}
+.social-icons a {
+    color: #bdd9c5;
+    margin-right: 18px;
+    font-size: 1.4rem;
+    transition: 0.2s;
+}
+.social-icons a:hover {
+    color: #6bcb7e;
+}
+.copyright {
+    text-align: center;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid #346c48;
+    font-size: 0.85rem;
+}
+
+/* responsivo */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+    .hero-image {
+        min-height: 280px;
+    }
+    .container {
+        padding: 0 24px;
+    }
+    .feature-flex {
+        flex-direction: column;
+    }
+    .counter-number {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 600px) {
+    .hero-stats {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .btn-primary, .btn-outline {
+        padding: 10px 20px;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
